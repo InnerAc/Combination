@@ -46,7 +46,7 @@ public class ComTest {
 	 */
 	@Test
 	public void TwiceCom(){
-		AloTB aloTB = new AloTB(10, 2);
+		AloTB aloTB = new AloTB(10, 3);
 		int[] a = new int[] {0,3,8};
 		aloTB.setSet(a);
 		aloTB.generate();
