@@ -40,4 +40,15 @@ public class ComTest {
 		aloTB.setSet(a);
 		aloTB.generate();
 	}
+	
+	/**
+	 * 生成两两组合
+	 */
+	@Test
+	public void TwiceCom(){
+		AloTB aloTB = new AloTB(10, 2);
+		int[] a = new int[] {0,3,8};
+		aloTB.setSet(a);
+		aloTB.generate();
+	}
 }
