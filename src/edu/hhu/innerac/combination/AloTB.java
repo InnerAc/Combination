@@ -30,6 +30,13 @@ public class AloTB extends AloT {
 		bSearch = new BSearch(arg);
 	}
 	
+	public void myFun(){
+		for(int i=1;i<=numb;i++){
+			System.out.print(c[i]);
+		}
+		System.out.println();
+	}
+	
 	@Override
 	public void visit(){
 		int pre = bSearch.findIndexOrPre(c[1]);
@@ -41,10 +48,7 @@ public class AloTB extends AloT {
 			}
 			pre = next;
 		}
-		for(int i=1;i<=numb;i++){
-			System.out.print(c[i]);
-		}
-		System.out.println();
+		myFun();
 	}
 
 }
