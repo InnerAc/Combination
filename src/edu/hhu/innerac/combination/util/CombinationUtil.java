@@ -1,5 +1,11 @@
 package edu.hhu.innerac.combination.util;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+
 public class CombinationUtil {
 
 	/**
@@ -44,7 +50,24 @@ public class CombinationUtil {
 		return A(n,t)/factorial(t);
 		
 	}
+	
+	/**
+	 * 从范围[st,en]中取m个不重复的随机数<br>
+	 * @param st	范围左边界（包括）
+	 * @param en	范围右边界（包括）
+	 * @param m		选取个数
+	 * @return
+	 */
+	public static List<Integer> randomN(int st, int en, int m){
+		Set<Integer> sran = new HashSet<>();
+		Random random = new Random();
+		while(sran.size() < m){
+			sran.add(random.nextInt(en -st) + st);
+		}
+		return new ArrayList<>(sran);
+	}
 	public static void main(String args[]){
-		System.out.println(C(3, 3));
+//		System.out.println(C(3, 3));
+		System.out.println(randomN(10, 20, 5));
 	}
 }

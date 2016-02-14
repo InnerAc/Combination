@@ -61,22 +61,42 @@ public class PermSelect {
 		return ans;
 	}
 	
+	public static List<String> StringToList(String str,int n){
+		List<String> list = new ArrayList<String>();
+		str += ',';
+		int dex = 0;
+		int cnt = 0;
+		int strN = str.length();
+		for(int i=0;i<strN;i++){
+			if(str.charAt(i) == ','){
+				cnt++;
+				if(cnt == n){
+					list.add(str.substring(dex,i));
+					cnt = 0;
+					dex = i+1;
+				}
+			}
+		}
+		return list;
+	}
 	
 	public static void main(String args[]){
 		PermSelect ps = new PermSelect();
 		List<String> lists = new ArrayList<>();
-		lists.add("1,2,3,4,5");
-		lists.add("2,1,3,4,5");
-		System.out.println(ps.FromNselectT(lists, 5, 3));
-		List<Integer> intList = new ArrayList<>();
-		for (int i = 1; i < 6; i++) {
-			intList.add(i);
-		}
-		intList.add(2);
-		intList.add(1);
-		for(int i=3;i<6;i++){
-			intList.add(i);
-		}
-		System.out.println(ps.FromNselectTN(intList, 5, 3));
+//		lists.add("1,2,3,4,5");
+//		lists.add("2,1,3,4,5");
+//		System.out.println(ps.FromNselectT(lists, 5, 3));
+//		List<Integer> intList = new ArrayList<>();
+//		for (int i = 1; i < 6; i++) {
+//			intList.add(i);
+//		}
+//		intList.add(2);
+//		intList.add(1);
+//		for(int i=3;i<6;i++){
+//			intList.add(i);
+//		}
+//		System.out.println(ps.FromNselectTN(intList, 5, 3));
+		String str = "1,2,3,4,5,6,7,8,9,10";
+		System.out.println(ps.StringToList(str, 5));
 	}
 }
