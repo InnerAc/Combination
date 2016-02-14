@@ -23,28 +23,30 @@ public class Permutation {
 	 */
 	public static List<String> perms(String str){
 		List<String> perm = new ArrayList<>();
-		int n = str.length();
+		String[] strs = str.split(",");
+		int n = strs.length;
+		System.out.println(strs);
 		Queue<String> queue = new LinkedList<>();
 		String vis = new String();
 		for(int i=0;i<n;i++){
 			vis += '0';
 		}
 		for(int i=0;i<n;i++){
-			queue.add(String.valueOf(str.charAt(i)));
+			queue.add(String.valueOf(strs[i]));
 			queue.add(visit(vis, i));
 		}
 		String array = null;
 		while(!queue.isEmpty()){
 			array = queue.poll();
 			vis = queue.poll();
-			if(array.length() == n){
+			if(array.length() == 2*n-1){
 				perm.add(array);
 			}else{
 				for(int i=0;i<n;i++){
 					if(vis.charAt(i) == '1'){
 						continue;
 					}
-					queue.add(array + str.charAt(i));
+					queue.add(array + ","+strs[i]);
 					queue.add(visit(vis, i));
 				}
 			}
@@ -54,7 +56,7 @@ public class Permutation {
 	}
 	
 	public static void main(String args[]){
-		List<String> pList = perms("abc");
+		List<String> pList = perms("a,b,c");
 		System.out.println(pList);
 	}
 }

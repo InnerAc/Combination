@@ -21,9 +21,10 @@ public class AloPerm extends AloT{
 	@Override
 	public void visit(){
 		String str = "";
-		for(int i=1;i<=numb;i++){
-			str += c[i];
+		for(int i=1;i<numb;i++){
+			str += c[i]+",";
 		}
+		str += c[numb];
 		List<String> perms = Permutation.perms(str);
 		for(String perm : perms){
 			myFun(perm);

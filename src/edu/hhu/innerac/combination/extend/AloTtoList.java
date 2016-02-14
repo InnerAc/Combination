@@ -15,9 +15,10 @@ public class AloTtoList extends AloT{
 	@Override
 	public void visit(){
 		String str = "";
-		for(int i=1;i<=numb;i++){
-			str += c[i];
+		for(int i=1;i<numb;i++){
+			str += c[i]+",";
 		}
+		str += c[numb];
 		ans.add(str);
 	}
 	
