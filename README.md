@@ -8,6 +8,11 @@
 - 实现组合数`(n,t)`。即在`[0,n)`中选出`t`个数的组合。
 - 实现了通过二分查找上界或当前数的下标，用来判断是否属于一个集合里面。
 - 实现了求不同集合之间的组合数。
+---
+- 求一个序列的全排列。-> edu.hhu.innerac.combination.util.Permutation.perms(String)
+- 求一个序列的排列数（仅排列数）。-> edu.hhu.innerac.combination.util.CombinationUtil.A(int,int)
+- 求一个序列的排列数（全部列出）。-> edu.hhu.innerac.combination.extend.AloPerm
+- 输入一个长度为`n`的序列的列表，从中求出长度为`t`（`t<n`）的遵循原顺序的序列并且去重。 -> edu.hhu.innerac.combination.PermSelect
 
 ## 样例
 例如生成如下集合中的长度为3的组合数:
