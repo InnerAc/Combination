@@ -50,6 +50,11 @@ public class AloT {
 		c[t + 2] = 0;
 		int j = t;
 		int x = 0;
+		//这个判断是我后加的
+		if (t >= n){
+			visit();
+			return;
+		}
 		while (true) {
 T2:
 			visit();

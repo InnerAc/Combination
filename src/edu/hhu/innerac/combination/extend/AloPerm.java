@@ -34,7 +34,7 @@ public class AloPerm extends AloT{
 		System.out.println(perm);
 	}
 	public static void main(String args[]){
-		AloPerm aloPerm = new AloPerm(5, 3);
+		AloPerm aloPerm = new AloPerm(5, 5);
 		aloPerm.generate();
 	}
 
