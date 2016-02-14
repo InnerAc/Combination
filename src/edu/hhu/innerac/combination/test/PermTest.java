@@ -23,8 +23,8 @@ public class PermTest {
 	@Test
 	public void test(){
 		AloTtoList aloTtoList = new AloTtoList(30, 5);
-		List<String> list = aloTtoList.generateList();
-		List<Integer> indexs = CombinationUtil.randomN(0, list.size()-1, 10);
+		List<String> list = aloTtoList.generateList();	//从0到29中生成长度为5的排列数
+		List<Integer> indexs = CombinationUtil.randomN(0, list.size()-1, 10);	//选出10个随机不重复的下标
 		List<String> newList = new ArrayList<>();
 		for(int index : indexs){
 			newList.add(list.get(index));
